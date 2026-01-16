@@ -1,0 +1,11 @@
+
+# Feature Thresholds
+blur:
+  threshold: 100.0 
+
+color:
+  clusters: 3       
+  min_coverage: 0.5 
+
+ocr:
+  lang: 'eng'
