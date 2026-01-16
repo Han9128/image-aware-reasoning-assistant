@@ -118,3 +118,86 @@ The system generates a structured JSON report in outputs folder for every image 
 }
 ```
 
+![strawberry_image](data/strawberry.jpeg)
+
+```json
+{
+    "metadata": {
+        "filename": "strawberry.jpeg",
+        "system": "image-aware-reasoning-assistant"
+    },
+    "extracted_signals": {
+        "blur": {
+            "is_blurry": false,
+            "blur_score": 1090.83,
+            "threshold_used": 100.0
+        },
+        "color": {
+            "dominant_colors": [
+                {
+                    "rgb": [
+                        60,
+                        91,
+                        22
+                    ],
+                    "coverage": 0.61
+                },
+                {
+                    "rgb": [
+                        204,
+                        211,
+                        214
+                    ],
+                    "coverage": 0.25
+                },
+                {
+                    "rgb": [
+                        172,
+                        48,
+                        42
+                    ],
+                    "coverage": 0.14
+                }
+            ],
+            "is_cluttered": false
+        },
+        "object": {
+            "detected_objects": [
+                {
+                    "label": "strawberry",
+                    "confidence": 0.993
+                },
+                {
+                    "label": "pineapple",
+                    "confidence": 0.001
+                },
+                {
+                    "label": "candle",
+                    "confidence": 0.0
+                }
+            ],
+            "primary_subject": "strawberry"
+        },
+        "ocr": {
+            "detected_text": "",
+            "word_count": 0,
+            "has_text": false
+        }
+    },
+    "final_decision": {
+        "image_quality_score": 0.95,
+        "issues_detected": [],
+        "detected_objects": [
+            "strawberry"
+        ],
+        "text_detected": [],
+        "llm_reasoning_summary": "The image is clear with a blur score above the threshold, has a clean background with high dominant color coverage, and no promotional text or watermarks. The subject, a strawberry, is clearly identified and relevant to e-commerce.",
+        "final_verdict": "Suitable for professional e-commerce use",
+        "confidence": 0.99
+    }
+}
+```
+
+
+```
+
