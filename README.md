@@ -29,8 +29,8 @@ sudo apt install tesseract-ocr
 ```
 ### 2. Clone the repository:
    ```bash
-   git clone https://github.com/Han9128/Voice-bot.git
-   cd Voice-bot
+   git clone https://github.com/Han9128/image-aware-reasoning-assistant.git
+   cd image-aware-reasoning-assistant
    ```
 
 ### 3. Python Environment
