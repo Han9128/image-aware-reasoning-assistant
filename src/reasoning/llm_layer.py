@@ -20,7 +20,7 @@ def llm_reasoning(visual_signals,api_key=None):
 
         is_blurry = blur_data.get('is_blurry', False)
         
-        
+
         is_cluttered = color_data.get('is_cluttered', False)
         has_text = ocr_data.get('has_text', False)
         subject = obj_data.get('primary_subject', 'unknown object')
@@ -60,6 +60,7 @@ def llm_reasoning(visual_signals,api_key=None):
 
     OUTPUT FORMAT:
     Return ONLY a valid JSON object. Do not include any other text or markdown fences.
+
     JSON SCHEMA:
     {{
       "image_quality_score": <float 0-1.0 based on clarity and composition>,
@@ -82,12 +83,16 @@ def llm_reasoning(visual_signals,api_key=None):
     try:
         response = client.chat.completions.create(
             model="llama-3.3-70b-versatile", 
-            messages=[
-                {
-                    "role": "user", 
-                    "content": f"Analyze these image signals and return a JSON verdict: {json.dumps(visual_signals)}"
-                }
-            ],
+           messages=[
+        {
+            "role": "system",
+            "content": prompt
+        },
+        {
+            "role": "user",
+            "content": json.dumps(visual_signals)
+        }
+    ],
             response_format={"type": "json_object"}
         )
         return json.loads(response.choices[0].message.content)

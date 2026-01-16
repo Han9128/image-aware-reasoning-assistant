@@ -33,7 +33,7 @@ def detect_objects(img_path,k=3):
 
 
 if __name__ == "__main__":
-    img_path = "data/test_image.jpeg"
+    img_path = "data/strawberry.jpeg"
     try:
         res = detect_objects(img_path)
         print(res)

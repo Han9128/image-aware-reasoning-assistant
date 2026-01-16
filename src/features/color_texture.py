@@ -38,5 +38,5 @@ def color_composition(img_path, k = 3):
 
 if __name__ == "__main__":
 
-    res = color_composition("data/test_image.jpeg")
+    res = color_composition("data/strawberry.jpeg")
     print(res)

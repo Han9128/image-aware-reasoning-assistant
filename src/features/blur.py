@@ -1,5 +1,4 @@
 
-
 import cv2
 
 def detect_blur(img_path,threshold=100.0):
@@ -24,5 +23,5 @@ def detect_blur(img_path,threshold=100.0):
 
 
 if __name__ == "__main__":
-    res = detect_blur("data/test_image.jpeg")
+    res = detect_blur("data/strawberry.jpeg")
     print(res)

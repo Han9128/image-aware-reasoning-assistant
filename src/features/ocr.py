@@ -23,7 +23,7 @@ def extract_text(img_path):
 
 if __name__ == "__main__":
     
-    img_path = "data/watermarkprotection.png"
+    img_path = "data/strawberry.jpeg"
     
     try:
         res = extract_text(img_path)
