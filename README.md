@@ -14,10 +14,18 @@ An AI-powered pipeline designed to evaluate product images for professional e-co
 
 ---
 
-## Prerequisites
-- Python 3.10.6 installed
-- Git installed
-- An LLM API key
+## Tools & Libraries
+
+- Python 3.9+
+- OpenCV (`opencv-python`)
+- NumPy
+- scikit-learn
+- TensorFlow / Keras (MobileNetV2)
+- PyTesseract (`pytesseract`)
+- Pillow (PIL)
+- python-dotenv
+- LLM SDK (Groq / OpenAI)
+
 
 ## Installation & Setup
 
@@ -59,7 +67,10 @@ python src/main.py
 ```
 
 ### Output
+
 The system generates a structured JSON report in outputs folder for every image processed, following this schema:
+
+![blur_strawberry_image](data/blur_strawberry.png)
 
 ```json
 {
