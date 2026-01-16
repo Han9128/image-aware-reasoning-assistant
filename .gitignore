@@ -1,0 +1,5 @@
+# Ignore these folders while pushing on github
+
+.venv/
+__pycache__/
+outputs/

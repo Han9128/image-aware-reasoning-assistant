@@ -1,0 +1,16 @@
+# Image Processing & Math
+opencv-python
+Pillow
+numpy
+scikit-learn
+
+# ML Framework (Using TensorFlow instead of PyTorch)
+tensorflow
+tensorflow-hub
+
+# OCR
+pytesseract
+
+# LLM & Config
+openai
+pyyaml
